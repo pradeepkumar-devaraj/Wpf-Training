@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Closing="MainWindow_OnClosing">
     <Grid>
         <CheckBox ToolTip="This is for color change" Checked="ToggleButton_OnChecked" Unchecked="ToggleButton_OnUnchecked" Content="CheckBox" HorizontalAlignment="Left" Margin="77,51,0,0" VerticalAlignment="Top"/>
         <Button Click="ButtonBase_OnClick" Content="Button" HorizontalAlignment="Left" Margin="215,51,0,0" VerticalAlignment="Top" Width="75"/>
@@ -35,9 +36,9 @@
             <TreeViewItem Header="Header1">Level1</TreeViewItem>
         </TreeView>
         <TabControl Name="tabControl"  HorizontalAlignment="Right" Height="200" Margin="572,74,0,0" VerticalAlignment="Top" Width="200">
-            <TabItem Header="Lion Cub">
+            <TabItem Header="Lion Cub" Name="tabItem">
                 <Grid Background="Transparent">
-                    <Image HorizontalAlignment="Stretch"  Source="Images/LionCub.jpg"></Image>
+                    <Image MouseLeave="UIElement_OnMouseLeave" MouseEnter="UIElement_OnMouseEnter" MouseDown="UIElement_OnMouseDown" HorizontalAlignment="Stretch"  Source="Images/LionCub.jpg"></Image>
                 </Grid>
             </TabItem>
             <TabItem Header="Adult Lion">
@@ -46,6 +47,17 @@
                 </Grid>
             </TabItem>
         </TabControl>
+        <Menu HorizontalAlignment="Left" Height="100" Margin="372,288,0,0" VerticalAlignment="Top" Width="300">
+            <MenuItem Click="MenuItem_OnClick" Header="File" Height="30" Width="40">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="13" Width="13" Source="Images/folder.jpg"></Image>
+                    <TextBlock>Save</TextBlock>
+                </StackPanel>
+            </MenuItem>
+            <MenuItem Header="Edit" Height="30" Width="40">Undo</MenuItem>
+            <MenuItem Header="View" Height="30" Width="40">ToolBox</MenuItem>
+        </Menu>
+        <TextBox Name="txtBox" KeyDown="UIElement_OnKeyDown" HorizontalAlignment="Left" Height="23" Margin="107,357,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

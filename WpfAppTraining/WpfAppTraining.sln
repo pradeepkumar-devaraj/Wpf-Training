@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationLibrary", "Mu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControls", "WpfControls\WpfControls.csproj", "{0BB643B7-5316-49E2-B7B3-E44F25557921}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfRoutedEvents", "WpfRoutedEvents\WpfRoutedEvents.csproj", "{B262E5AB-82CF-4AE7-855A-6BC483FA5462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfStyles", "WpfStyles\WpfStyles.csproj", "{A333A0A6-8407-43EF-B694-CC342EE120E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{0BB643B7-5316-49E2-B7B3-E44F25557921}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BB643B7-5316-49E2-B7B3-E44F25557921}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BB643B7-5316-49E2-B7B3-E44F25557921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B262E5AB-82CF-4AE7-855A-6BC483FA5462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B262E5AB-82CF-4AE7-855A-6BC483FA5462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B262E5AB-82CF-4AE7-855A-6BC483FA5462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B262E5AB-82CF-4AE7-855A-6BC483FA5462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A333A0A6-8407-43EF-B694-CC342EE120E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A333A0A6-8407-43EF-B694-CC342EE120E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A333A0A6-8407-43EF-B694-CC342EE120E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A333A0A6-8407-43EF-B694-CC342EE120E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace WpfControls
@@ -47,6 +49,40 @@ namespace WpfControls
             {
                 cb.Foreground = Brushes.Blue;
             }
+        }
+
+        private void MenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MainWindow_OnClosing(object sender, CancelEventArgs e)
+        {
+            var result = MessageBox.Show("Do you want to close?", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Image is clicked", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void UIElement_OnMouseEnter(object sender, MouseEventArgs e)
+        {
+            tabControl.Background = Brushes.Chartreuse;
+        }
+
+        private void UIElement_OnMouseLeave(object sender, MouseEventArgs e)
+        {
+            tabControl.Background = Brushes.Transparent;
+        }
+
+        private void UIElement_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            txtBox.Foreground = Brushes.Blue;
         }
     }
 }
