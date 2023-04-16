@@ -1,0 +1,10 @@
+﻿<Application x:Class="WpfAppTraining.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfAppTraining"
+             Startup="App_OnStartup"
+            >
+    <Application.Resources>
+        <local:MainWindow x:Key="dataContext" ></local:MainWindow>
+    </Application.Resources>
+</Application>
