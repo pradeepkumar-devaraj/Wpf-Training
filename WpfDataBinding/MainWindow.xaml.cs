@@ -24,5 +24,6 @@ namespace WpfDataBinding
         {
             viewModel.Name = "Updated Name";
         }
+
     }
 }

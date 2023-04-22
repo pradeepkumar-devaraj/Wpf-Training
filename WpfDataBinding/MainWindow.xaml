@@ -7,8 +7,35 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.Resources>
+            <local:IntegerToColorConverter x:Key="IntegerToColorConverter" ></local:IntegerToColorConverter>
+            <local:StringIntegerToColorConverter x:Key="StringIntegerToColorConverter"></local:StringIntegerToColorConverter>
+        </Grid.Resources>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="88,103,0,0" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
         <Button Content="Update Name" Command="{Binding UpdateCommand}" HorizontalAlignment="Left" Margin="135,170,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding EmployeeList}" HorizontalAlignment="Left" Height="100" Margin="373,74,0,0" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Employee Name"
+                      Binding="{Binding Name}" Width="*" />
+                <DataGridTextColumn Header="Employee Age"
+                      Binding="{Binding Age}" Width="*" />
+            </DataGrid.Columns>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" >
+                        <Setter.Value>
+                            <MultiBinding Converter="{StaticResource StringIntegerToColorConverter}">
+                                <Binding Path="Name" />
+                                <Binding Path="Age" />
+                            </MultiBinding>
+                        </Setter.Value>
+                        </Setter>
+                </Style>
+            </DataGrid.RowStyle>
+        </DataGrid>
+        <Button Content="Add Employee" Command="{Binding AddEmployeeCommand}" HorizontalAlignment="Left" Margin="537,265,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,142,0,0" TextWrapping="Wrap" Text="{Binding Age}" VerticalAlignment="Top" Width="120"/>
+        <Button  Content="Fetch Data" Command="{Binding FetchDataCommand}" HorizontalAlignment="Left" Margin="194,251,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
