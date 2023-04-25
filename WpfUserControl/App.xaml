@@ -1,0 +1,14 @@
+﻿<Application x:Class="WpfUserControl.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfUserControl"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type local:EmployeeViewModel}">
+            <local:EmployeeControl />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:StudentViewModel}">
+            <local:StudentControl />
+        </DataTemplate>
+    </Application.Resources>
+</Application>
